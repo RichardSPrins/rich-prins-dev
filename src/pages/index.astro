@@ -4,6 +4,9 @@ import { BaseHead } from '@components/seo';
 import { products, SITE_TITLE } from '@data/index';
 import { SITE_DESCRIPTION, socialLinks } from '@data/index';
 import RootLayout from '@layouts/root-layout.astro';
+import { Image } from 'astro:assets';
+import PersonalPic from "../assets/images/personal-pic.webp"
+
 ---
 
 <!doctype html>
@@ -19,28 +22,34 @@ import RootLayout from '@layouts/root-layout.astro';
 	<RootLayout>
 		<div
 			id='navbar+title'
-			class='flex flex-col w-full gap-6 max-w-xl lowercase'>
+			class='flex flex-col w-full gap-6 lowercase'>
 			<Header />
+			<div class="grid grid-cols-2 gap-8 items-center">
 			<h1
-				class='w-full text-start text-[min(12vw,72px)] font-medium leading-[0.9] tracking-[-2px] sm:tracking-[-4px]'>
-				meet sanju
-				<span class='text-gray-500 dark:text-gray-400'>designer founder</span>
+				class='col-span-2 md:col-span-1 w-full text-start text-[min(12vw,72px)] font-medium leading-[0.9] tracking-[-2px] sm:tracking-[-4px]'>
+				meet rich
+				<span class='text-gray-500 dark:text-gray-400'>developer & founder</span>
 			</h1>
+			<Image class="col-span-2 md:col-span-1 max-w-sm rounded-md w-full mx-auto" src={PersonalPic} alt="Richard Prins Headshot" width={PersonalPic.width} height={PersonalPic.height}/>
+			</div>
+
+			<div class='font-medium text-lg text-gray-700 dark:text-gray-400'>
+			Hi, I'm Rich! A Senior full stack developer, with over 6 years of experience working with brands and businesses ranging from startups to Fortune 500 companies, AAA game studios, and digital agencies.
+			</div>
 
 			<div
 				id='about'
 				class='flex flex-col gap-4'>
 				<div class='font-medium text-lg text-gray-700 dark:text-gray-400'>
 					I run <a
-						href='https://thisux.com'
+						href='https://extensiblmedia.com'
 						target='_blank'
 						class='underline underline-offset-2'
-						>ThisUX</a
-					>, a design-led product studio. We make things that work. For years, I
-					wore many hats. Now I’m doing my own thing.
+						>Extensibl</a
+					>, an app development studio. I design, code, and launch brand defining products for founders and businesses.
 				</div>
 
-				<div class='font-medium text-lg text-gray-700 dark:text-gray-300'>
+				<!-- <div class='font-medium text-lg text-gray-700 dark:text-gray-300'>
 					I work on ideas like
 					<div class='flex flex-wrap gap-2 mt-5'>
 						{
@@ -59,7 +68,7 @@ import RootLayout from '@layouts/root-layout.astro';
 							))
 						}
 					</div>
-				</div>
+				</div> -->
 
 				<div class='font-medium text-lg text-gray-700 dark:text-gray-400'>
 					I team up with founders and business owners. We build MVPs, full
@@ -67,9 +76,35 @@ import RootLayout from '@layouts/root-layout.astro';
 				</div>
 
 				<div class='font-medium text-lg text-gray-700 dark:text-gray-400'>
+				    I can help with:
+					<ul class="list-disc pl-6">
+                        <li>Mobile App Development</li>
+                        <li>Digital Product Design</li>
+                        <li>Web App Development</li>
+                        <li>Technical Consulting</li>
+                    </ul>
+				</div>
+				<div class='font-medium text-lg text-gray-700 dark:text-gray-400'>
+				    My Tech Stack:
+					<ul class="list-disc pl-6">
+                        <li>Front End: React, React Native, Svelte, Vue, Ember, TypeScript</li>
+                        <li>Backend: TypeScript/NodeJS, PHP/Laravel, Python/Django, Golang</li>
+                        <li>DevOps: Git, Docker</li>
+                        <li>Databases: MySQL, Postgresql, MongoDB</li>
+                    </ul>
+				</div>
+
+				<div class='font-medium text-lg text-gray-700 dark:text-gray-400'>
 					Want to chat?
 					<a
-						href='https://cal.com/imsanju/15min'
+						href='mailto:richardsprins@gmail.com'
+						target='_blank'
+						class='underline underline-offset-2'>
+						email me
+					</a>
+					or
+					<a
+						href='https://links.extensiblmedia.com/intro'
 						target='_blank'
 						class='underline underline-offset-2'>
 						schedule a call

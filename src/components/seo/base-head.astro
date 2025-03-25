@@ -43,22 +43,6 @@ const { title, description, image = '/images/ogimage.png' } = Astro.props;
 	)
 }
 
-<!-- clarity analytics -->
-{
-	import.meta.env.PROD && (
-		<script
-			type='text/javascript'
-			set:html={`
-			(function(c,l,a,r,i,t,y){
-				c[a] = c[a] || function() { (c[a].q=c[a].q||[]).push(arguments) };
-				t=l.createElement(r); t.async=1; t.src="https://www.clarity.ms/tag/" + i;
-				y=l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t,y);
-			})(window, document, "clarity", "script", "${import.meta.env.CLARITY_TRACKING_ID}");
-		`}
-		/>
-	)
-}
-
 <link
 	rel='sitemap'
 	href='/sitemap-index.xml'
@@ -75,59 +59,53 @@ const { title, description, image = '/images/ogimage.png' } = Astro.props;
 <link
 	rel='apple-touch-icon'
 	sizes='57x57'
-	href='/apple-icon-57x57.png'
+	href='/apple-touch-icon.png'
 />
 <link
 	rel='apple-touch-icon'
 	sizes='60x60'
-	href='/apple-icon-60x60.png'
+	href='/apple-touch-icon.png'
 />
 <link
 	rel='apple-touch-icon'
 	sizes='72x72'
-	href='/apple-icon-72x72.png'
+	href='/apple-touch-icon.png'
 />
 <link
 	rel='apple-touch-icon'
 	sizes='76x76'
-	href='/apple-icon-76x76.png'
+	href='/apple-touch-icon.png'
 />
 <link
 	rel='apple-touch-icon'
 	sizes='114x114'
-	href='/apple-icon-114x114.png'
+	href='/apple-touch-icon.png'
 />
 <link
 	rel='apple-touch-icon'
 	sizes='120x120'
-	href='/apple-icon-120x120.png'
+	href='/apple-touch-icon.png'
 />
 <link
 	rel='apple-touch-icon'
 	sizes='144x144'
-	href='/apple-icon-144x144.png'
+	href='/apple-touch-icon.png'
 />
 <link
 	rel='apple-touch-icon'
 	sizes='152x152'
-	href='/apple-icon-152x152.png'
+	href='/apple-touch-icon.png'
 />
 <link
 	rel='apple-touch-icon'
 	sizes='180x180'
-	href='/apple-icon-180x180.png'
+	href='/apple-touch-icon.png'
 />
 <link
 	rel='icon'
 	type='image/png'
 	sizes='192x192'
-	href='/android-icon-192x192.png'
-/>
-<link
-	rel='icon'
-	type='image/png'
-	sizes='32x32'
-	href='/favicon-32x32.png'
+	href='/web-app-manifest-192x192.png'
 />
 <link
 	rel='icon'
@@ -136,22 +114,8 @@ const { title, description, image = '/images/ogimage.png' } = Astro.props;
 	href='/favicon-96x96.png'
 />
 <link
-	rel='icon'
-	type='image/png'
-	sizes='16x16'
-	href='/favicon-16x16.png'
-/>
-<link
 	rel='manifest'
 	href='/manifest.json'
-/>
-<meta
-	name='msapplication-TileColor'
-	content='#ffffff'
-/>
-<meta
-	name='msapplication-TileImage'
-	content='/ms-icon-144x144.png'
 />
 <meta
 	name='theme-color'
